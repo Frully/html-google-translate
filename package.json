@@ -1,0 +1,19 @@
+{
+  "name": "epub-machine-translation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Frully <xxfrully@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "google-translate-open-api": "^1.2.0",
+    "htmlparser2": "^4.0.0",
+    "xml-translate": "0.0.1"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
