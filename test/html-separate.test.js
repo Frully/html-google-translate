@@ -1,6 +1,6 @@
-const separate = require('../lib/html-sentence').separate
+const separate = require('../lib/html-separate').separate
 
-describe('html-sentence.js', () => {
+describe('html-separate.js', () => {
   it('能拆分文字节点', () => {
     const sentences = separate('<div><p id="a">Paragraph 1</p><p id="b">Paragraph 2</p></div>')
 
