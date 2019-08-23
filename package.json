@@ -1,12 +1,12 @@
 {
-  "name": "epub-machine-translation",
+  "name": "html-google-translate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
-  "author": "Frully <xxfrully@gmail.com>",
+  "author": "Frully <i@frully.org>",
   "license": "ISC",
   "dependencies": {
     "dom-serializer": "^0.2.1",
