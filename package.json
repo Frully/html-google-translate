@@ -6,6 +6,11 @@
   "scripts": {
     "test": "jest"
   },
+  "homepage": "https://github.com/Frully/html-google-translate",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Frully/html-google-translate.git"
+  },
   "author": "Frully <i@frully.org>",
   "license": "ISC",
   "dependencies": {
