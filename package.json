@@ -14,6 +14,7 @@
     "xml-translate": "0.0.1"
   },
   "devDependencies": {
+    "dom-serializer": "^0.2.1",
     "jest": "^24.9.0"
   }
 }
