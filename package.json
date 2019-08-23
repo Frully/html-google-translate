@@ -9,12 +9,11 @@
   "author": "Frully <xxfrully@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "dom-serializer": "^0.2.1",
     "google-translate-open-api": "^1.2.0",
-    "htmlparser2": "^4.0.0",
-    "xml-translate": "0.0.1"
+    "htmlparser2": "^4.0.0"
   },
   "devDependencies": {
-    "dom-serializer": "^0.2.1",
     "jest": "^24.9.0"
   }
 }
