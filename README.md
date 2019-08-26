@@ -43,7 +43,7 @@ const transHtml = await translate(html, {
 #### html
 Type: `string`
 
-The HTML to be translated
+The HTML to be translated.
 
 #### options
 Type: `object`
@@ -51,7 +51,7 @@ Type: `object`
 ##### from
 Type: `string` | `'auto'`
 
-The `html` language. Must be `auto` or one of the codes/names (not case sensitive) contained in [languages.ts](https://github.com/hua1995116/google-translate-open-api/blob/master/src/language.ts)
+The `html` language. Must be `auto` or one of the codes/names (not case sensitive) contained in [languages.ts](https://github.com/hua1995116/google-translate-open-api/blob/master/src/language.ts).
 
 ##### to
 Type: `string`
@@ -68,7 +68,7 @@ Type: `AxiosProxyConfig` | `false` Default: `false`
 
 Proxy for request, [AxiosProxyConfig](https://github.com/axios/axios/blob/2ee3b482456cd2a09ccbd3a4b0c20f3d0c5a5644/index.d.ts#L14).
 
-### xmlMode
+#### xmlMode
 Type: `boolean` | `'foreign'` Default: `false`
 
 Indicate whether to render the result in XML.
