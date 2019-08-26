@@ -7,10 +7,10 @@ const html = '<p><i>I</i> love <a href="#">you</a>!</p>'
 
 const transHtml = await translate(html, {
   from: 'en',
-  to: 'zh-CN',
+  to: 'es',
 })
 
-// '<p><i>我</i>爱<a href=\"#\">你</a>！</p>'
+// '<p><i>Me</i> encanta <a href="#">que</a> !</p>'
 ```
 
 ## Installation

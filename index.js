@@ -18,7 +18,6 @@ async function translateHtml(html, options = {}) {
   } else {
     transTexts = parseMultiple(result.data[0])  
   }
-  console.log(transTexts)
 
   for (let i = 0; i < sentences.length; i++) {
     sentences[i].update(transTexts[i])
