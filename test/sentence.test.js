@@ -1,7 +1,7 @@
 const { separate } = require('../lib/html-separate')
 const { toHtml } = require('../lib/dom-utils')
 
-describe.only('sentence.js', () => {
+describe('lib/sentence.js', () => {
   it('能把译文恢复到 node', () => {
     const { dom, sentences } = separate('<div><p id="a">Paragraph 1</p><p id="b">Paragraph 2</p></div>')
 

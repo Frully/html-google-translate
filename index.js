@@ -4,17 +4,24 @@ const { parseMultiple } = require('google-translate-open-api')
 const { separate } = require('./lib/html-separate')
 const { toHtml } = require('./lib/dom-utils')
 
-async function translateHtml(html, options) {
+async function translateHtml(html, options = {}) {
   const { dom, sentences } = separate(html)
 
   const texts = sentences.map(sentence => sentence.text)
 
   const result = await translate(texts, options)
 
-  const tarnsTexts = parseMultiple(result.data[0])
+  let transTexts
+
+  if (typeof result.data === 'string') {
+    transTexts = [result.data]
+  } else {
+    transTexts = parseMultiple(result.data[0])  
+  }
+  console.log(transTexts)
 
   for (let i = 0; i < sentences.length; i++) {
-    sentences[i].update(tarnsTexts[i])
+    sentences[i].update(transTexts[i])
   }
 
   return toHtml(dom, options)
