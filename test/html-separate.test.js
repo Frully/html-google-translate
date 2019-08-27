@@ -20,7 +20,7 @@ describe('lib/html-separate.js', () => {
     expect(sentences[0].text).toBe('<a i=0>Paragraph 1 </a><a i=1>inline</a>')
     expect(sentences[0].nodes.length).toBe(2)
     expect(sentences[0].nodes[0].parent.attribs.id).toBe('a')
-    expect(sentences[0].nodes[1].parent.attribs.id).toBe('b')
+    expect(sentences[0].nodes[1].attribs.id).toBe('b')
   })
 
   it('能拆分文字包含多层行内元素的节点', () => {
@@ -30,8 +30,8 @@ describe('lib/html-separate.js', () => {
     expect(sentences[0].text).toBe('<a i=0>Paragraph 1 </a><a i=1>inline</a><a i=2>BIG</a>')
     expect(sentences[0].nodes.length).toBe(3)
     expect(sentences[0].nodes[0].parent.attribs.id).toBe('a')
-    expect(sentences[0].nodes[1].parent.attribs.id).toBe('c')
-    expect(sentences[0].nodes[2].parent.attribs.id).toBe('d')
+    expect(sentences[0].nodes[1].attribs.id).toBe('c')
+    expect(sentences[0].nodes[2].attribs.id).toBe('d')
   })
 
   it('处理<br />', () => {
@@ -128,6 +128,6 @@ describe('lib/html-separate.js', () => {
     expect(sentences[0].text).toBe('<a i=0>&quot;BIG&quot; </a><a i=1>inline</a>')
     expect(sentences[0].nodes.length).toBe(2)
     expect(sentences[0].nodes[0].parent.attribs.id).toBe('a')
-    expect(sentences[0].nodes[1].parent.attribs.id).toBe('b')
+    expect(sentences[0].nodes[1].attribs.id).toBe('b')
   })
 })
