@@ -1,6 +1,6 @@
 {
   "name": "html-google-translate",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Translate HTML with Google Translate and maintain the original structures of sentences and HTML.",
   "keywords": [
     "html",

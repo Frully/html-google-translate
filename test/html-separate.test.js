@@ -130,4 +130,11 @@ describe('lib/html-separate.js', () => {
     expect(sentences[0].nodes[0].parent.attribs.id).toBe('a')
     expect(sentences[0].nodes[1].attribs.id).toBe('b')
   })
+
+
+  it('能正确解析 xhtml', () => {
+    html = `<?xml version='1.0' encoding='utf-8'?>\n<p><span>a</span><span>b</span><span>c</span></p>`
+    const { sentences } = separate(html)
+    expect(sentences.length).toBe(1)
+  })
 })
