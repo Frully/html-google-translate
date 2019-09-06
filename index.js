@@ -1,5 +1,4 @@
-const translate = require('google-translate-open-api').default
-const { parseMultiple } = require('google-translate-open-api')
+const { default: translate, parseMultiple } = require('@frully/google-translate-open-api')
 
 const { separate } = require('./lib/html-separate')
 const { toHtml } = require('./lib/dom-utils')
