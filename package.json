@@ -1,6 +1,6 @@
 {
   "name": "html-google-translate",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Translate HTML with Google Translate and maintain the original structures of sentences and HTML.",
   "keywords": [
     "html",
@@ -21,7 +21,7 @@
   "author": "Frully <i@frully.org>",
   "license": "ISC",
   "dependencies": {
-    "@frully/google-translate-open-api": "^1.4.1",
+    "@frully/google-translate-open-api": "^1.4.2",
     "dom-serializer": "^0.2.1",
     "htmlparser2": "^4.0.0"
   },
