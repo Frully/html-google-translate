@@ -53,6 +53,16 @@ describe('lib/sentence.js', () => {
     expect(html).toBe('<p class="a">"¿Qué?" ella preguntó con <span class="b">impaciencia</span> .</p>')
   })
 
+  it('更新时能正确处理嵌套', () => {
+    const { dom, sentences } = separate('<p>The prince shrieking in pain. “Get it <span class="a">off,</span>” he screamed. “Get it <span class="b">off!</span>”</p>')
+
+    sentences[0].update('<a i=0>El príncipe chillando de dolor.</a> <a i=0>“Get it</a> <a i=2><a i=1>off,</a> ” gritó.</a> <a i=2>“¡</a> <a i=3>Quítatelo!</a> <a i=4>”</a>')
+
+    const html = toHtml(dom)
+
+    expect(html).toBe('<p>El príncipe chillando de dolor. “Get it <span class=\"a\">off,</span>  ” gritó. “¡ <span class=\"b\">Quítatelo!</span> ”</p>')
+  })
+
   it.todo('更新时能正确处理标点符号前后的空格')
   it.todo('更新时能正确处理行内包含块级元素的情况')
 })

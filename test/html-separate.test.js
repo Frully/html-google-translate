@@ -137,4 +137,10 @@ describe('lib/html-separate.js', () => {
     const { sentences } = separate(html)
     expect(sentences.length).toBe(1)
   })
+
+  it('能正确解析单文本', () => {
+    html = `I'm lonely.`
+    const { sentences } = separate(html)
+    expect(sentences.length).toBe(1)
+  })
 })
