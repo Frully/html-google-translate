@@ -8,14 +8,23 @@ async function translateHtml(html, options = {}) {
 
   const texts = sentences.map(sentence => sentence.text)
 
-  const result = await translate(texts, options)
+  let result
+
+  try {
+    result = await translate(texts, options)
+  } catch (err) {
+    if (err.statusCode === 302 || err.statusCode === 403) {
+      err = new Error('Was banned by the Google Translate API.')
+    }
+    throw err
+  }
 
   let transTexts
 
   if (typeof result.data === 'string') {
     transTexts = [result.data]
   } else {
-    transTexts = parseMultiple(result.data[0])  
+    transTexts = parseMultiple(result.data[0])
   }
 
   for (let i = 0; i < sentences.length; i++) {
